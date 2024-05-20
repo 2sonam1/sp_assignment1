@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var open = 0;
     $(".search button").click(function () {
         var searchBar = $(".search-bar");
         searchBar.toggle();
