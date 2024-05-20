@@ -8,12 +8,70 @@ a{
     text-decoration: none;
     color: #3C3C3C;
 }
-/* .banContent-in-elements{
+
+.dropdownIn-link{
+    position: relative;
+}
+/* Header Section */
+header ul{
+    list-style-type: none;
+    justify-content: center;
+    margin-bottom: 0px;
+    padding-left: 0px;
     display: flex;
-} */
-.insurance a{
-    text-decoration: none;
-    color:#3C3C3C
+    gap: 10px;
+    margin-right: 10px;   
+}
+header li{
+    margin: 10px;
+}
+header{
+    display: relative;
+    z-index: 100;
+    width: 100%;
+    background-color: white;
+    /* position: sticky; */
+    font-family: "DM Sans";
+    margin-bottom: 40px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+}
+.active{
+    max-height: 100vh;
+    min-height: 100vh;
+}
+.navbar{
+    height: 96px;
+    position: static;
+    z-index: 1000;
+    /* justify-content: end; */
+}
+.navbar img{
+    width: 140px;
+}
+
+/* main div */
+.main{
+    font-family: "DM Sans";
+    padding-top: 60px;
+}
+
+/* BannerSection */
+.banner{
+    font-family: "DM Sans";
+    display: flex;
+    gap: 40px;
+}
+.banContent{
+    justify-content: center;
+    padding-right: 70px;
+    
+}
+.banImage{
+    justify-content: right; 
+}
+.banImageIn1{
+    transition: 2s ease all;
+    transition-delay: 2s;
 }
 .banContent-in-button button{
     background-color: #118657;
@@ -60,7 +118,81 @@ a{
     line-height: 32px;
     font-weight: 400;
 }
+.banImage1{
+    position: absolute;
+    left: -10px;
+    z-index: -1;
+    top:-10px;
+    width: 419.52px;
+    height: 357.69px;
+    transition: all 0.25s ease 0s;
+    transform: translate3d(-20px, 0px, 0px);
+}
+.banImage2{
+    width: 419px;
+    height: 357px;
+}
+.banImageIn{
+     position: relative;
+     text-align: center;
+}
+
+/* InsuranceSection */
+.insurance a{
+    text-decoration: none;
+    color:#3C3C3C
+}
+.insurance{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    
+}
+.insurance a{
+    cursor: pointer;
+}
+.insurance img{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.insur{
+     transition: 0.5s ease all;
+}
+.insurIn:hover {
+    transform: scale(1.05); 
+}
+.insurIn{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px 10px;
+   transition: 0.2s ease all;
+   border-radius: 4.25px;
+   text-align: center;
+   
+}
+.insurIn-img{
+    text-align: center;
+}
+.insurIn-text{
+    text-align: center;
+}
+
+/* Procedure Section */
+.procContent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 80px;
+}
+.procInNum{
+    border-bottom: 2px solid #118657;
+    color: #FFAC31;
+    margin-bottom: 20px;
+}
+
 .dropdown{
+    /* height: 100%; */
+    /* height: auto; */
+    width: 100%;
     display: none;
     position: absolute;
     top: 96px;
@@ -69,10 +201,22 @@ a{
     padding: 40px 0 40px 0;
 }
 .search-bar{
-    text-align: center;
     display: none;
+    position:absolute;
+    text-align: center;
+    z-index:100;
+    right: 30px;
     align-items: center;
-    /* size: 5px; */
+    background-color: white;
+    /* visibility: hidden;
+    opacity: 0; */
+}
+.search{
+    position: sticky;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    
 }
 .search-bar input{ 
     border-style: solid;
@@ -146,13 +290,7 @@ a{
 .links{
     display: flex;
 }
-.search{
-    text-align: center;
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
 
-}
 .links a{
     text-decoration: none;
     color: #3C3C3C;
@@ -161,15 +299,19 @@ a{
     /* text-decoration: underline; */
     color: #118657;
 }
-.search button{
+.search-bar-hidden{
     /* padding: 10px; */
     border-style: solid;
     border-radius: 20px;
     border-width: 1px;
     padding: 0 10px 0 10px;
     border-color: #118657;
-    background-color: transparent;
-    
+    background-color: white;   
+}
+.search-bar-active{ 
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left-style: none;
 }
 
 .search i{
@@ -177,28 +319,8 @@ a{
     color: #118657;
 }
 
-header ul{
-    list-style-type: none;
-    justify-content: center;
-    margin-bottom: 0px;
-    padding-left: 0px;
-    display: flex;
-    gap: 20px;
-    
-    
-}
-header li{
-    margin: 10px;
-}
-header{
-    display: relative;
-    z-index: 1000;
-    width: 100%;
-    background-color: white;
-    position: fixed;
-    font-family: "DM Sans";
-    margin-bottom: 40px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+.Motoring{
+    position: relative;
 }
 .Motoring-links-left{
     padding: 40px;
@@ -225,11 +347,18 @@ header{
     padding: 20px;
     position: absolute;
     top: 96px;
+    left: 0;
     background-color: #E7F3EE;
     width: 100%;
     visibility: hidden;
     opacity: 0;
-
+    height: auto;
+    z-index: 100;
+    
+}
+.show{
+    visibility: visible;
+    opacity: 1;
 }
 .Motoring-links-right{
     display: grid;
@@ -243,35 +372,10 @@ header{
 .toggle{
 
 }
-.main{
-    font-family: "DM Sans";
-    padding-top: 120px;
-}
-.navbar{
-    height: 96px;
-}
-.navbar img{
-    width: 140px;
-}
 
-.banner{
-    font-family: "DM Sans";
-    display: flex;
-    gap: 40px;
-}
 
-.banContent{
-    justify-content: center;
-    padding-right: 70px;
-    
-}
-.banImage{
-    justify-content: right; 
-}
-.banImageIn1{
-    transition: 2s ease all;
-    transition-delay: 2s;
-}
+
+
 .helpContentIn{
     transition: ease .2s;  
 }
@@ -282,80 +386,18 @@ header{
    transition: 0.4s ease-in-out all;
    object-fit: cover;
 } 
-.banImage1{
-    position: absolute;
-    left: -10px;
-    z-index: -1;
-    top:-10px;
-    width: 419.52px;
-    height: 357.69px;
-    /* transition: 5s ease all; */
-    transition: all 0.25s ease 0s;
-    transform: translate3d(-20px, 0px, 0px);
-}
-.banImage2{
-    width: 419px;
-    height: 357px;
-}
-.banImageIn{
-     position: relative;
-     text-align: center;
-}
+
 .space{
     padding-top: 80px;
 }
 
-.insurance{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px;
-    
-}
-.insurance a{
-    cursor: pointer;
-}
 
-.insurance img{
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
-}
-.insur{
-     transition: 0.5s ease all;
-}
-.insurIn:hover {
-    transform: scale(1.05); 
-}
-.insurIn{
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.19);
-    padding: 30px 10px;
-   transition: 0.2s ease all;
-   border-radius: 4.25px;
-   text-align: center;
-   
-}
-.insurIn-img{
-    text-align: center;
-}
-.insurIn-text{
-    text-align: center;
-}
 
 .center{
     text-align: center;
 }
 
-.procContent{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 80px;
-}
 
-.procInNum{
-    border-bottom: 2px solid #118657;
-    color: #FFAC31;
-    margin-bottom: 20px;
-}
 
 .heading{
     margin-bottom: 60px;
@@ -555,16 +597,23 @@ footer li{
 .bar { 
     display: none;
     margin-left: 20px;
+    position: absolute;
+    right:36px;
+    top:35px;
  }
+ .cross{
+    /* display: none; */
+    margin-left: 20px;
+    position: absolute;
+    right:36px;
+    top:35px;
+}
  .bar button{
     background-color: transparent;
     border-width: 0;
     color: #118657;
  } 
-.cross{
-    display: none;
-    margin-left: 20px;
-}
+
 .cross button{
     background-color: transparent;
     border-width: 0;
@@ -579,6 +628,15 @@ h1{
     line-height: 56px;
     font-weight: 700;
 }
+.listings-active{
+    display: block;
+}
+/* .show{
+    display: block;
+} */
+.menu-inactive{
+    display: none;
+}
 @media only screen and (max-width: 1203px) {
     .helpContent img{
         width: 400px;
@@ -587,9 +645,15 @@ h1{
         
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    .bar { display: none; }
-    .cross { display: none; } 
+    /* .bar { display: none; }
+    .cross { display: none; }  */
     .dropdown { display: none; } 
+    .Motoring-links{
+        position: absolute;
+    }
+    .listinga{
+        display: block;
+    }
 }
 @media only screen and (max-width: 1000px) {
     .helpContent img{
@@ -614,8 +678,8 @@ h1{
     .brokerImagesIn{
         grid-template-columns: 1fr 1fr 1fr;
     }
-    .bar { display: none; } 
-    .cross { display: none; } 
+    /* .bar { display: none; } 
+    .cross { display: none; }  */
     .dropdown { display: none; } 
     .commitment-box{
         grid-template-columns: 1fr 1fr;
@@ -641,6 +705,12 @@ h1{
     .banContent-in-elements ul{
         flex-wrap: wrap;
     
+    }
+    .Motoring-links{
+        position: absolute;
+    }
+    .listinga{
+        display: block;
     }
     
 }
@@ -670,23 +740,61 @@ h1{
     .commitment-box-right-image { display: none; } 
     /* .Motoring-links{display: none;} */
     .bar { display: block; } 
-    .cross { display: block; } 
-    .dropdown { display: block; } 
+    /* .cross { display: block; } 
+    .dropdown { display: block; }  */
     .commitment-box{
         grid-template-columns: 1fr;
     }
     .brokerImagesIn{
         grid-template-columns: 1fr 1fr;
     }
-    .listings { display: none; }
+    /* .listings { display: none; } */
     /* #swipe{
         width: 300px;
     } */
     .rating{
         grid-template-columns: 1fr;
     }
+    .navbar{
+        position: relative;
+        height: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: start;
+        justify-content: start;
+        background-color: white;
+    }
+    /* header{
+        max-height: 100vh;
+        min-height: 100vh;
+        overflow-y: hidden;
+    } */
+    .search-bar{
+        position: absolute;
+    }
+    .listings ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .Motoring-links{
+        height: 0;
+        padding: 0;
+        position: static;
+    }
+    .search{
+        position: absolute;
+        right:70px;
+        top:35px;
+    }
+    .listings{
+    display: none;
+}
+    
     
 }
+/* .container{
+    position: relative;
+} */
 @media only screen and (max-width: 550px) {
     
     .helpContent img{
@@ -702,7 +810,7 @@ h1{
         left: 40px;
     }
     .commitment-box-right-image { display: none; } 
-    .listings { display: none; } 
+    /* .listings { display: none; }  */
     .prodContent{
         grid-template-columns: 1fr 1fr;
     }
@@ -715,8 +823,8 @@ h1{
     .whyUsContent{
         grid-template-columns: 1fr;
     }
-    .bar { display: block; } 
-    .cross { display: block; } 
+    /* .bar { display: block; }  */
+    /* .cross { display: block; }  */
     .dropdown { display: block; }
     /* .Motoring-links{display: none;}  */
     .commitment-box-left-circle{
@@ -736,6 +844,11 @@ h1{
     h1{
         font-size: 38.83px;
     }
+    /* header{
+        max-height: 100vh;
+        min-height: 100vh;
+        overflow-y: auto;
+    } */
     
 }
 @media only screen and (max-width: 410px){
@@ -779,3 +892,4 @@ h1{
     height: 24px;
     margin-bottom: 10px;
 }
+
